@@ -19,4 +19,5 @@ union EepromData {
 	uint8_t bytes[sizeof(EepromDataStruct)];
 
 	void print();
+	void printAsHex();
 };
