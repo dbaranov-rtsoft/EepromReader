@@ -14,7 +14,7 @@ void EepromData::print() const [[suppress(type.1)]] {
 	printAsHex();
 }
 
-void EepromData::printAsHex() const {
+void EepromData::printAsHex() const [[suppress(bounds.3)]] [[suppress(bounds.1)]] [[suppress(type.2)]]{
 	for (uint8_t byte : bytes) {
 		std::cout << std::hex << std::setfill('0') << std::setw(2) << "0x" << static_cast<int>(byte) << " ";
 	}

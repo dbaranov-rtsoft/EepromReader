@@ -23,6 +23,8 @@ bool I2CEepromDevice::read(T& data) {
 		return false;
 	}
 
-	eepromInputfile.read(reinterpret_cast<char*>(&data), sizeof(data));
+	[[suppress(type.1)]] {
+		eepromInputfile.read(reinterpret_cast<char*>(&data), sizeof(data));
+	}
 	return static_cast<bool>(eepromInputfile);
 }
