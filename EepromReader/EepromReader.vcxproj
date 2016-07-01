@@ -154,16 +154,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EepromData.cpp" />
-    <ClCompile Include="EepromDataReadingAdapter.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EepromData.h" />
-    <ClInclude Include="EepromDataReadingAdapter.h" />
-    <ClInclude Include="EepromTypes.h" />
+    <ClInclude Include="I2CEepromDevice.h" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="simple_eeprom.txt">
+    <Content Include="BinaryEeprom.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

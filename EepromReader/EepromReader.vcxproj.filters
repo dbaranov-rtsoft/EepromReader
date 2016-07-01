@@ -21,25 +21,19 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EepromDataReadingAdapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EepromData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EepromDataReadingAdapter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EepromTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EepromData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I2CEepromDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="simple_eeprom.txt" />
+    <Content Include="BinaryEeprom.txt" />
   </ItemGroup>
 </Project>
