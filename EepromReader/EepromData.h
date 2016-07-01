@@ -10,14 +10,15 @@ struct EepromDataStruct {
 	uint8_t manufacturer[16];
 	uint8_t manufactoringDate[16];
 };
-#pragma pack(pop)
-
-static_assert(sizeof(EepromDataStruct) == (4 * 16), "EepromData structure incorrect packing");
 
 union EepromData {
 	EepromDataStruct data;
 	uint8_t bytes[sizeof(EepromDataStruct)];
 
-	void print();
-	void printAsHex();
+	void print() const;
+	void printAsHex() const;
 };
+#pragma pack(pop)
+
+static_assert(sizeof(EepromDataStruct) == (4 * 16), "EepromData structure incorrect packing");
+static_assert(sizeof(EepromData) == (4 * 16), "EepromData union incorrect packing");

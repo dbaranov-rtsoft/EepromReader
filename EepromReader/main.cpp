@@ -10,7 +10,7 @@ int main() {
 	I2CEepromDevice eepromI2cDevice(eepromFileName);
 
 	EepromData eepromData;
-	bool isOk = eepromI2cDevice.read(eepromData);
+	const bool isOk = eepromI2cDevice.read(eepromData);
 	if (!isOk) {
 		return -1;
 	}
