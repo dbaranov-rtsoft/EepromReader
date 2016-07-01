@@ -21,4 +21,4 @@ union EepromData {
 #pragma pack(pop)
 
 static_assert(sizeof(EepromDataStruct) == (4 * 16), "EepromData structure incorrect packing");
-static_assert(sizeof(EepromData) == (4 * 16), "EepromData union incorrect packing");
+static_assert(sizeof(EepromData) == sizeof(EepromDataStruct), "EepromData union incorrect packing");
